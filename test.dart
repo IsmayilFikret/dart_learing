@@ -1,15 +1,18 @@
 void main() {
   //EXERCISE 2
+  print('EXERCISE 2');
   imtahan telebe = imtahan(14);
-
+  print('***************************************************');
   //------------------------------------------------------
 
   //EXERCISE 3-1
+  print('EXERCISE 3-1');
   userInfo users = userInfo(
       Name: 'Name', userName: 'userName', fathersName: 'fathersName', age: 20);
   print(users.Name);
+  print('***************************************************');
   //EXERCISE 3-2
-
+  print('EXERCISE 3-2');
   String? carName = cars.carName;
   int? carNumber = 56;
   print("masinin modeli : " +
@@ -19,12 +22,20 @@ void main() {
       ' , ' +
       carNumber.toString());
   //------------------------------------------------------
-
+  print('***************************************************');
   //EXERCISE 4-1
+  print('EXERCISE 4-1');
   checkName Name = checkName('test');
   print(Name);
-
+  print('***************************************************');
   //EXERCISE 4-2
+  print('EXERCISE 4-2');
+  addNumber().changeNumber();
+
+  //EXERCISE 5
+
+  menimClassim myClass = myImpClass();
+  myClass.myName('name');
 }
 
 // EXERCISE 1  value type
@@ -104,7 +115,46 @@ class checkName {
 
 //EXERCISE 4-2
 
-
+class addNumber {
+  int number = 20;
+  addNumber() {
+    print('menim ilk reqemim : ' + number.toString());
+  }
+  Future<int?> changeNumber() async {
+    await Future.delayed(Duration(seconds: 5));
+    number = number + 20;
+    print('menim yeni reqemim : ' + number.toString());
+  }
+}
 
 //EXERCISE 5
 //Abstrack class ve impl ve extends istifade ederek bir class dan diger classa mueyyen miras verecek bir class yazin
+
+abstract class menimClassim {
+  void myName(String name);
+  void mySurName(String surName);
+}
+
+class myImpClass implements menimClassim {
+  @override
+  void myName(String name) {
+    // TODO: implement myName
+  }
+
+  @override
+  void mySurName(String surName) {
+    // TODO: implement mySurName
+  }
+}
+
+class myExstendClass extends menimClassim {
+  @override
+  void myName(String name) {
+    // TODO: implement myName
+  }
+
+  @override
+  void mySurName(String surName) {
+    // TODO: implement mySurName
+  }
+}
