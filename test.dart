@@ -1,5 +1,3 @@
-import 'dart:io';
-
 void main() {
   //EXERCISE 2
   imtahan telebe = imtahan(14);
@@ -14,12 +12,19 @@ void main() {
 
   String? carName = cars.carName;
   int? carNumber = 56;
-  print(" masinin modeli : " +
+  print("masinin modeli : " +
       carName! +
       ' ' +
-      ' masinin nomresi : ' +
+      'masinin nomresi : ' +
       ' , ' +
       carNumber.toString());
+  //------------------------------------------------------
+
+  //EXERCISE 4-1
+  checkName Name = checkName('test');
+  print(Name);
+
+  //EXERCISE 4-2
 }
 
 // EXERCISE 1  value type
@@ -79,15 +84,27 @@ class cars {
   static const int? carNumber = 45;
 }
 
-
-
 //EXERCISE 4  Functions
-//  Bir istifadecinin adini yoxlayan bir funksiya yazmalisiz ve bu ad eger "Test" olarsa istifadeciye  adi deyisme icazesi verilmelidir 
-//  ele bir mehtood yazilmalidirki baslangic olan bir ede 5 saniye sonra deyerini 20 vahid artitrmalidir
+//  Bir istifadecinin adini yoxlayan bir funksiya yazmalisiz ve bu ad eger "Test" olarsa istifadeciye  adi deyisme icazesi verilmelidir
+//  ele bir mehtood yazilmalidirki baslangic olan bir eded 5 saniye sonra deyerini 20 vahid artirmalidir
+
+//EXERCISE 4-1
+
+class checkName {
+  String name;
+  checkName(this.name) {
+    if (name == 'test') {
+      print('size ad deyisme icazesi verildi ve yeni adiniz :  ' + name);
+    } else if (name != 'test') {
+      print('ad deyisme bloklanib');
+      const name = 'test';
+    }
+  }
+}
+
+//EXERCISE 4-2
 
 
 
-//EXERCISE 5 
+//EXERCISE 5
 //Abstrack class ve impl ve extends istifade ederek bir class dan diger classa mueyyen miras verecek bir class yazin
-
-
